@@ -1,2 +1,2 @@
-[ "exactor": {:git,"https://github.com/sasa1977/exactor.git","b2097aed0f0e33b9879a97a802a518359c8217f8",[]},
-  "genx": {:git,"https://github.com/yrashk/genx.git","02dd9ed54871899f937991646ed87275107bbc16",[]} ]
+[ "exactor": {:git,"https://github.com/sasa1977/exactor.git","84d36e3b02f0c773bace925f144494ec5cb51ab8",[]},
+  "genx": {:git,"https://github.com/yrashk/genx.git","85fc66c93e5e5711635e5d031a4031538b295ce0",[]} ]

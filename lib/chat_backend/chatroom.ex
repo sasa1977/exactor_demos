@@ -1,4 +1,4 @@
-import ExActor
+import Helpers
 
 defactor Chatroom do
   def init(_) do initial_state([]) end

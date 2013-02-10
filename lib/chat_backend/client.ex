@@ -1,4 +1,4 @@
-import ExActor
+import Helpers
 
 defrecord ClientInfo, id: nil, chatroom: nil
 defactor Client do

@@ -1,4 +1,4 @@
-import ExActor
+import Helpers
 
 defactor Producer do
   defcast produce, state: consumer do

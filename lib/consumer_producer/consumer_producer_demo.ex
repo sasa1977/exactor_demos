@@ -20,8 +20,8 @@ defmodule ConsumerProducerDemo do
   import Helpers
   
   def run do
-    {:ok, consumer} = Consumer.start
-    {:ok, producer} = Producer.start(consumer)
+    consumer = Consumer.start
+    producer = Producer.start(consumer)
     
     times(5, fn(_) -> producer.produce end)
     

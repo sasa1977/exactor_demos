@@ -6,7 +6,15 @@ defmodule Helpers do
   defmacro defactor(name, [do: block]) do
     quote do
       defmodule unquote(name) do
-        use ExActor, tupmod: true
+        use ExActor
+        
+        defoverridable [start: 2]
+        def start(args, options) do
+          super(args, options) |>
+          elem(1) |>
+          actor
+        end
+        
         unquote(block)
       end
     end

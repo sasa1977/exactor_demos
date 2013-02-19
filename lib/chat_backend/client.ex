@@ -1,7 +1,8 @@
-import Helpers
+defmodule Client do
+  use ExActor
 
-defrecord ClientInfo, id: nil, chatroom: nil
-defactor Client do
+  defrecord ClientInfo, id: nil, chatroom: nil
+
   def init(id) do initial_state(ClientInfo.new(id: id)) end
 
   defcast join(chatroom), state: client_info do

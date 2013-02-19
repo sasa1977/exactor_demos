@@ -1,6 +1,6 @@
-import Helpers
+defmodule Producer do
+  use ExActor
 
-defactor Producer do
   defcast produce, state: consumer do
     :timer.sleep(100)
     value = :random.uniform(100)
@@ -9,7 +9,9 @@ defactor Producer do
   end
 end
 
-defactor Consumer do
+defmodule Consumer do
+  use ExActor
+
   defcast consume(value) do
     :timer.sleep(200)
     IO.puts "                consumed #{value}"
@@ -20,8 +22,8 @@ defmodule ConsumerProducerDemo do
   import Helpers
   
   def run do
-    consumer = Consumer.start
-    producer = Producer.start(consumer)
+    consumer = Consumer.actor_start
+    producer = Producer.actor_start(consumer)
     
     times(5, fn(_) -> producer.produce end)
     

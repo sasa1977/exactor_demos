@@ -1,6 +1,6 @@
-import Helpers
+defmodule Chatroom do
+  use ExActor
 
-defactor Chatroom do
   def init(_) do initial_state([]) end
 
   defcast add_client(new_client), state: clients do 

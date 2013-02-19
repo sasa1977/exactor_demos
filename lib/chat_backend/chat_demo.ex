@@ -1,10 +1,6 @@
 defmodule ChatDemo do
   def run do
-    chatroom = Chatroom.start
-    
-    client1 = Client.start(1); client1.join(chatroom)
-    client2 = Client.start(2); client2.join(chatroom)
-    client3 = Client.start(3); client3.join(chatroom)
+    [client1, client2, _] = create_clients(3, Chatroom.actor_start)
     
     # Since joining is async, I have to wait some time for it to take effect,
     # otherwise sending will not do anything. In a real production system,
@@ -17,5 +13,16 @@ defmodule ChatDemo do
     
     client2.send("Hello")
     :timer.sleep(100)
+  end
+
+  defp create_clients(n, chatroom) do
+    Enum.map((1..n), 
+      fn(id) -> create_client(id, chatroom) end
+    )
+  end
+
+  defp create_client(id, chatroom) do
+    client1 = Client.actor_start(id)
+    client1.join(chatroom)
   end
 end

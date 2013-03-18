@@ -13,3 +13,4 @@ To start a demo:
     mix run ExActorDemo.run ConsumerProducerDemo
     mix run ExActorDemo.run ChatDemo
     mix run ExActorDemo.run PipelineDemo
+    mix run QueueingDemo.run

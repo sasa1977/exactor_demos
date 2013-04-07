@@ -9,8 +9,9 @@ To start a demo:
     
     mix deps.get
     
-    mix run ExActorDemo.run CalculatorDemo
-    mix run ExActorDemo.run ConsumerProducerDemo
-    mix run ExActorDemo.run ChatDemo
-    mix run ExActorDemo.run PipelineDemo
+    mix run CalculatorDemo.run
+    mix run ConsumerProducerDemo.run
+    mix run ChatDemo.run
+    mix run PipelineDemo.run
     mix run QueueingDemo.run
+    mix run ParallelizationDemo.run

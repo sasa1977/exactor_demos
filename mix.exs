@@ -8,6 +8,9 @@ defmodule ExActorDemo.Mixfile do
   def application do [] end
 
   defp deps do
-    [{:exactor, "0.1", git: "https://github.com/sasa1977/exactor.git" }]
+    [
+      {:exactor, "0.1", git: "https://github.com/sasa1977/exactor.git" },
+      {:poolboy, github: "devinus/poolboy"}
+    ]
   end
 end

@@ -2,7 +2,7 @@ defmodule ExActorDemo.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :exactor_demo, version: "0.0.1", deps: deps]
+    [app: :exactor_demos, version: "0.0.1", deps: deps]
   end
 
   def application do [] end

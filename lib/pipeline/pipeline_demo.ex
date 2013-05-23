@@ -1,6 +1,4 @@
 defmodule PipelineDemo do
-  import Helpers
-  
   def run do
     test_seq()
     test_pipeline()
@@ -17,9 +15,9 @@ defmodule PipelineDemo do
   defp test_pipeline do
     IO.puts "pipeline"
     pipeline = Pipeline.create([
-      function(:f1, 1),
-      function(:f2, 1),
-      function(:f3, 1),
+      function(f1/1),
+      function(f2/1),
+      function(f3/1),
       fn(x) -> IO.puts x end
     ])
     

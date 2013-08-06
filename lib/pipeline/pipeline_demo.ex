@@ -15,9 +15,9 @@ defmodule PipelineDemo do
   defp test_pipeline do
     IO.puts "pipeline"
     pipeline = Pipeline.create([
-      function(f1/1),
-      function(f2/1),
-      function(f3/1),
+      &f1/1,
+      &f2/1,
+      &f3/1,
       fn(x) -> IO.puts x end
     ])
     

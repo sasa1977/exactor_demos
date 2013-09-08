@@ -18,7 +18,7 @@ defmodule PipelineDemo do
       &f1/1,
       &f2/1,
       &f3/1,
-      fn(x) -> IO.puts x end
+      fn(x) -> x |> to_string |> IO.puts end
     ])
     
     send_test_messages(pipeline)

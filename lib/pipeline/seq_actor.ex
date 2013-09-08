@@ -6,6 +6,7 @@ defmodule SeqActor do
     a = f1(i) 
     b = f2(a)
     result = f3(b)
-    IO.puts result
+
+    result |> to_string |> IO.puts
   end
 end

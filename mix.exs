@@ -9,7 +9,7 @@ defmodule ExActorDemo.Mixfile do
 
   defp deps do
     [
-      {:exactor, "0.1", github: "sasa1977/exactor.git" },
+      {:exactor, "0.1", github: "sasa1977/exactor" },
       {:poolboy, github: "devinus/poolboy"}
     ]
   end

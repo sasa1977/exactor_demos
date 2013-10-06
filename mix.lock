@@ -1,2 +1,2 @@
-[ "exactor": {:git, "git://github.com/sasa1977/exactor.git.git", "f37d42310c6a4bb1792c8eb61f408e7aec1524f7", []},
+[ "exactor": {:git, "git://github.com/sasa1977/exactor.git", "a380468012191158d768ada6c604eb0bd2f6610c", []},
   "poolboy": {:git, "git://github.com/devinus/poolboy.git", "91b68de43d49bcccf2631016febda70b20d7aa75", []} ]
